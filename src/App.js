@@ -10,21 +10,26 @@ import Navbar from './Component/Navbar/Navbar';
 import Home from './Component/Home/Home';
 import LogIn from './Component/LogIn/LogIn';
 import Admin from './Component/Admin/Admin';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import Order from'./Component/Order/Order'
 
 function App() {
   return (
     <Router>
       <Navbar/>
       <Switch>
-        <Route path="/home">
+        <Route exact path="/home">
           <Home />
         </Route>
-        <Route path="/login">
+        <Route exact path="/login">
           <LogIn/>
         </Route>
-        <Route path="/admin/:id">
+        <PrivateRoute exact path="/admin/:id">
           <Admin/>
-        </Route>
+        </PrivateRoute>
+        <PrivateRoute exact path="/order">
+          <Order/>
+        </PrivateRoute>
         <Route path="/">
           <Home />
         </Route>

@@ -37,7 +37,7 @@ const Service = () => {
         <div className="row">
           {/* <button onClick={handleClick}>add all</button> */}
       {
-        eventData.map(e => <ServiceDetail event={e}></ServiceDetail>)
+        eventData.map(e => <ServiceDetail event={e} ></ServiceDetail>)
       }
         </div>
       </div>

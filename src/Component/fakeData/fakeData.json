@@ -1,19 +1,23 @@
 [{
     "name":"Search doctor",
      "img":"https://i.ibb.co/5cWhzJH/search.png",
-     "description":"Choose your doctor from thousands of specialist, general, and trusted hospitals"
+     "description":"Choose your doctor from thousands of specialist, general, and trusted hospitals",
+     "price":540
+
   },
   
   {
     "name":"Online pharmacy",
      "img":"https://i.ibb.co/Wgf67s4/online-pharmacy.png",
-     "description":"Buy your medicines with our mobile application with a simple delivery system"
+     "description":"Buy your medicines with our mobile application with a simple delivery system",
+     "price":640
   },
   
   {
     "name":"Consultation",
      "img":"https://i.ibb.co/wW6nsMQ/consultation.png",
-     "description":"Free consultation with our trusted doctors and get the best recomendations"
+     "description":"Free consultation with our trusted doctors and get the best recomendations",
+     "price":450
   },
   
   {

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../image/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
+  const[name,setName]=useState(null)
+  useEffect(()=>{
+    const userName = JSON.parse(localStorage.getItem('user'))
+    if (userName) {
+      setName(userName.name)
+    }
+   
+},[])
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -27,7 +35,11 @@ const Navbar = () => {
                 <Link className="nav-link active" to="/admin/book">Admin</Link>
               </li>
               <li className="nav-item me-5">
-                <Link className="btn btn-primary" to="/login">Log in</Link>
+                <Link to="/login"><button className="btn btn-success">{name}</button></Link>
+              </li>
+                
+               <li className="nav-item me-5">
+                <Link to="/login"><button className="btn btn-success">Log in</button></Link>
               </li>
             </ul>
           </div>

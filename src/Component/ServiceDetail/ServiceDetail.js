@@ -28,8 +28,12 @@ const ServiceDetail = (props) => {
             <div class="py-3">
               <animated.h4 style={a} class="fw-bold card-title">{name}</animated.h4>
               <p class="card-text">{description}</p>
+              <p>${(Math.random() * 1000).toFixed(2)}</p>
+            {/* </div>
+            <Link to={`/Order/${_id}`} className="btn btn-lg btn-outline-primary rounded-pill" to="/login">Get Service</Link>
+          </div> */}
             </div>
-            <Link to={`/AdminBook/${_id}`} className="btn btn-lg btn-outline-primary rounded-pill" to="/login">Get Service</Link>
+            <Link to={`/Order`} className="btn btn-lg btn-outline-primary rounded-pill" to="/login">Get Service</Link>
           </div>
         </div>
       </div>

@@ -3,6 +3,8 @@ import { Switch, Link, Route } from 'react-router-dom';
 import AdminBook from './AdminBook';
 import AdminBookingList from './AdminBookingList';
 import AdminReview from './AdminReview';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
+
 
 const Admin = () => {
   return (
@@ -20,15 +22,15 @@ const Admin = () => {
           </div>
           <div className="col">
             <Switch>
-              <Route path="/admin/book">
+              <PrivateRoute exact path="/admin/book">
                 <AdminBook/>
-              </Route>
-              <Route path="/admin/booking-list">
+              </PrivateRoute>
+              <PrivateRoute exact path="/admin/booking-list">
                 <AdminBookingList/>
-              </Route>
-              <Route path="/admin/review">
+              </PrivateRoute>
+              <PrivateRoute exact path="/admin/review">
                 <AdminReview/>
-              </Route>
+              </PrivateRoute>
             </Switch>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function AdminBook() {
  const user = JSON.parse(localStorage.getItem('user'))
  console.log(user);
 
- const handleSubmit=()=>{
+ const handleSubmit=(e)=>{
 
  }
 
